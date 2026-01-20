@@ -131,20 +131,20 @@ export const FACTIONS: Faction[] = [
         colors: { primary: '#E8B4C8', secondary: '#7B2D5B', accent: '#D4A5B9' },
         effectType: '꽃잎',
         particleCount: 300,
-        philosophy: '매화만개(梅花萬開). 혹한 속에서도 피어나는 매화처럼 고고하고 화려하다.',
+        philosophy: '몰락한 영광(衰頹華山). 과거 천하제일검문의 자존심을 지키며, 비참한 현실과 싸운다.',
         signature_skills: ['매화검법', '암향소사검', '자하신공', '이십사수매화검법'],
         leader: 'maehwa',
         locations: [
             { name: '화산', hanja: '華山', x: 48, y: 40, type: '본산' }
         ],
         relations: [
-            { targetId: 'jongnam', type: '숙적', description: '섬서 패권 분쟁, 대대로 이어진 앙숙', intensity: 'strong', since: '150년 전', history: '매화검 vs 종남대검의 정통성 논쟁' },
-            { targetId: 'wudang', type: '동맹', description: '검리 교류, 상호 검결 전수', intensity: 'normal', history: '표면 동맹이나 검도 정통성 암투' },
-            { targetId: 'kongdong', type: '협력', description: '섬서 지역 공동 방위', intensity: 'normal', history: '실제로는 공동파 하대' },
-            { targetId: 'namgung', type: '암투', description: '검문 제일 다투', intensity: 'normal', history: '천하제일검 칭호 놓고 암묵적 경쟁' },
-            { targetId: 'shaolin', type: '우호', description: '무림맹 핵심파', intensity: 'normal', history: '표면 우호, 내심 소림 독주 불만' },
-            { targetId: 'moyong', type: '원한', description: '과거 검보 도난 의혹', intensity: 'weak', history: '100년 전 검보 실종 사건' },
-            { targetId: 'cheonma', type: '적대', description: '정마대전 선봉', intensity: 'strong' }
+            { targetId: 'jongnam', type: '숙적', description: '섬서 패권 분쟁, 대대로 이어진 앙숙', intensity: 'strong', since: '150년 전', history: '매화검 vs 종남대검의 정통성 논쟁. 과거 영광을 빼앗은 앙숙.' },
+            { targetId: 'wudang', type: '동맹', description: '검리 교류, 상호 검결 전수', intensity: 'normal', history: '표면 동맹이나 과거 영광 회복 야망' },
+            { targetId: 'kongdong', type: '협력', description: '섬서 지역 공동 방위', intensity: 'normal', history: '실제로는 공동파 하대. 더 이상 몰락할 수 없다.' },
+            { targetId: 'namgung', type: '암투', description: '검문 제일 다투', intensity: 'strong', history: '천하제일검 칭호를 되찾아야 한다. 몰락 전 영광의 증명.' },
+            { targetId: 'shaolin', type: '우호', description: '무림맹 핵심파', intensity: 'normal', history: '표면 우호, 내심 소림 독주 불만. 예전 위상 회복 야망.' },
+            { targetId: 'moyong', type: '원한', description: '과거 검보 도난 의혹', intensity: 'strong', history: '100년 전 검보 실종 사건. 화산 몰락의 원인 중 하나.' },
+            { targetId: 'cheonma', type: '적대', description: '정마대전 선봉', intensity: 'strong', history: '몰락했어도 마교와만큼은 진다.' }
         ],
         history: '검의 화려함과 날카로움을 극한까지 추구하는 중원 제일의 검문.'
     },
@@ -563,21 +563,22 @@ export const FACTIONS: Faction[] = [
         colors: { primary: '#17202A', secondary: '#2E4053', accent: '#C0392B' },
         effectType: '암영',
         particleCount: 50,
-        philosophy: '의뢰 완수. 감정을 지우고 오직 목표만을 제거한다.',
+        philosophy: '암살은 예술(殺的美學). 감정 없이, 완벽하게, 아름답게 죽인다.',
         signature_skills: ['무영암살술', '비도술', '은형법', '살수검'],
         leader: 'mumyeong',
         locations: [
             { name: '불명', hanja: '不明', x: 45, y: 45, type: '본산' }
         ],
         relations: [
-            { targetId: 'imperial', type: '숙적', description: '관부 척살 순위 1위', intensity: 'strong', history: '수많은 관료 암살' },
-            { targetId: 'sacheon', type: '밀약', description: '맹독 공급 계약', intensity: 'normal', history: '당가 독약 비밀 구매' },
+            { targetId: 'imperial', type: '숙적', description: '관부 척살 순위 1위', intensity: 'strong', history: '수많은 관료 암살. 예술이자 직업.' },
+            { targetId: 'sacheon', type: '협력', description: '맹독 공급 계약', intensity: 'normal', history: '당가 독약으로 작품의 완성도 높임' },
             { targetId: 'cheongseong', type: '협력', description: '독과 암살의 연계', intensity: 'weak' },
-            { targetId: 'haomun', type: '협력', description: '정보 제공 대가', intensity: 'normal' },
-            { targetId: 'cheonma', type: '종속', description: '마교 암살단 역할', intensity: 'weak', history: '마교 하청 암살' },
-            { targetId: 'sapa_union', type: '협력', description: '암살 의뢰', intensity: 'weak' },
-            { targetId: 'gaebang', type: '적대', description: '추적 대상', intensity: 'normal' },
-            { targetId: 'blood_sect', type: '협력', description: '암흑 거래', intensity: 'weak', history: '특수 임무 협력' }
+            { targetId: 'haomun', type: '협력', description: '정보 제공 대가', intensity: 'normal', history: '하오문 정보로 타격 설계' },
+            { targetId: 'cheonma', type: '협력', description: '마교 암살 의뢰', intensity: 'normal', history: '종속 아님. 의뢰와 대가의 관계. Pro는 노예가 아니다.' },
+            { targetId: 'sapa_union', type: '협력', description: '암살 의뢰', intensity: 'weak', history: '돈만 되면 누구든 죽인다' },
+            { targetId: 'gaebang', type: '적대', description: '추적 대상', intensity: 'normal', history: '개방 정보망이 방해' },
+            { targetId: 'blood_sect', type: '협력', description: '암흑 거래', intensity: 'weak', history: '특수 임무 협력. 예술적 도전.' },
+            { targetId: 'namgung', type: '중립', description: '세가 의뢰 수락', intensity: 'weak', history: '남궁도 돈만 되면 의뢰인' }
         ],
         history: '돈을 받고 사람을 죽이는 암살 집단. 그 실체는 베일에 싸여 있다.'
     },
@@ -591,7 +592,7 @@ export const FACTIONS: Faction[] = [
         colors: { primary: '#1B1B1B', secondary: '#B71C1C', accent: '#E53935' },
         effectType: '흑염',
         particleCount: 200,
-        philosophy: '힘이 곧 진리. 약자는 강자에게 복종해야 한다.',
+        philosophy: '천마유존(天魔唯尊). 광적인 충성과 배신의 권력투쟁. 충성자에게 힘을, 배신자에게 죽음을.',
         signature_skills: ['천마신공', '흑염장', '흡성대법', '천마군림보'],
         leader: 'cheonma',
         locations: [
@@ -600,14 +601,14 @@ export const FACTIONS: Faction[] = [
         relations: [
             { targetId: 'shaolin', type: '숙적', description: '정마대전의 불구대천 원수', intensity: 'strong', history: '수차례 정마대전의 주적' },
             { targetId: 'wudang', type: '적대', description: '정마대전 주력', intensity: 'strong' },
-            { targetId: 'blood_sect', type: '숙적', description: '마도(魔道) 정통성 분쟁', intensity: 'strong', history: '흡혈사교와 천마숭배의 노선 대립' },
-            { targetId: 'sapa_union', type: '종속', description: '사파 세력 흡수', intensity: 'normal', history: '녹림 일부 산채 복속' },
-            { targetId: 'suro', type: '밀약', description: '비밀 운송', intensity: 'weak' },
-            { targetId: 'salsu', type: '종속', description: '암살단 휘하 편입', intensity: 'normal', history: '살수막 일부 마교 소속' },
+            { targetId: 'blood_sect', type: '숙적', description: '마도(魔道) 정통성 분쟁', intensity: 'strong', history: '흡혈사교와 천마숭배의 노선 대립. 배신한 혈교를 척살.' },
+            { targetId: 'sapa_union', type: '종속', description: '사파 세력 흡수', intensity: 'normal', history: '녹림 일부 산채 복속. 충성 시험중.' },
+            { targetId: 'suro', type: '밀약', description: '비밀 운송', intensity: 'weak', history: '배신하면 죽는다' },
+            { targetId: 'salsu', type: '협력', description: '암살 의뢰 관계', intensity: 'normal', history: '충성파 vs 배신파 내부 암투에 활용' },
             { targetId: 'namgung', type: '적대', description: '중원 침공 저지선', intensity: 'strong' },
             { targetId: 'kunlun', type: '적대', description: '서역 세력권 충돌', intensity: 'normal' },
-            { targetId: 'imperial', type: '적대', description: '황권 도전', intensity: 'strong' },
-            { targetId: 'north_ice', type: '밀약', description: '새외 세력 협정', intensity: 'weak', history: '중원 분할 밀약설' }
+            { targetId: 'imperial', type: '적대', description: '황권 도전', intensity: 'strong', history: '천마 vs 황제, 권력의 정점' },
+            { targetId: 'north_ice', type: '밀약', description: '새외 세력 협정', intensity: 'normal', history: '중원 분할 밀약. 서로 배신할 기회 노림.' }
         ],
         history: '천마를 신격화하는 광신 집단. 절대 복종과 힘의 숭배가 교리이다.'
     },
@@ -621,20 +622,20 @@ export const FACTIONS: Faction[] = [
         colors: { primary: '#641E16', secondary: '#1A1A1A', accent: '#E74C3C' },
         effectType: '혈기',
         particleCount: 500,
-        philosophy: '피는 생명의 근원. 피를 통해 영생과 힘을 얻는다.',
+        philosophy: '피는 광기(血狂). 마공의 대가로 인성을 잃고, 주화입마의 경계에서 흡혈한다.',
         signature_skills: ['혈요공', '혈수공', '시해술', '혈조'],
         leader: 'hyeolma',
         locations: [
             { name: '혈굴', hanja: '血窟', x: 35, y: 30, type: '본산' }
         ],
         relations: [
-            { targetId: 'shaolin', type: '적대', description: '무림 공적 1호', intensity: 'strong', history: '사교(邪敎)로 규정' },
-            { targetId: 'cheonma', type: '숙적', description: '마도 정통성 분쟁', intensity: 'strong', history: '흡혈술과 천마공의 노선 대립, 혈교도 척살 사건' },
-            { targetId: 'sacheon', type: '적대', description: '독혈공 도용 앙갚음', intensity: 'strong' },
-            { targetId: 'salsu', type: '협력', description: '암흑 거래', intensity: 'normal', history: '혈교 암살 의뢰' },
+            { targetId: 'shaolin', type: '적대', description: '무림 공적 1호', intensity: 'strong', history: '사교(邪敎)로 규정. 흡혈로 인성을 잃은 자들.' },
+            { targetId: 'cheonma', type: '숙적', description: '마도 정통성 분쟁', intensity: 'strong', history: '흡혈술과 천마공의 노선 대립. 마공 대가로 광기에 빠진 자들의 주화입마.' },
+            { targetId: 'sacheon', type: '적대', description: '독혈공 도용 앙갚음', intensity: 'strong', history: '당가 독공을 왜곡해 혈공으로. 인성 상실의 증거.' },
+            { targetId: 'salsu', type: '협력', description: '암흑 거래', intensity: 'normal', history: '혈교 암살 의뢰. 마공 대가로 미쳐가는 자들의 처리.' },
             { targetId: 'imperial', type: '적대', description: '황실 척결 대상', intensity: 'strong' },
             { targetId: 'gaebang', type: '적대', description: '정파 토벌 대상', intensity: 'normal' },
-            { targetId: 'beast_palace', type: '밀약', description: '사혈술 연구 교류', intensity: 'normal', history: '야수의 피를 이용한 혈공 연구' },
+            { targetId: 'beast_palace', type: '협력', description: '사혈술 연구 교류', intensity: 'normal', history: '야수의 피를 이용한 혈공 연구. 주화입마 위험.' },
             { targetId: 'wudang', type: '적대', description: '도가의 척결 대상', intensity: 'strong' },
             { targetId: 'namgung', type: '적대', description: '세가 토벌대', intensity: 'normal' }
         ],
