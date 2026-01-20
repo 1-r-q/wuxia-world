@@ -589,16 +589,16 @@ export const FACTIONS: Faction[] = [
         relations: [
             { targetId: 'shaolin', type: '숙적', description: '정마대전의 불구대천 원수', intensity: 'strong', history: '수차례 정마대전의 주적' },
             { targetId: 'wudang', type: '적대', description: '정마대전 주력', intensity: 'strong' },
-            { targetId: 'blood_sect', type: '종속', description: '혈교 흡수 통합', intensity: 'normal', history: '50년 전 혈교 잔당 흡수' },
-            { targetId: 'sapa_union', type: '밀약', description: '물자 거래', intensity: 'weak' },
+            { targetId: 'blood_sect', type: '숙적', description: '마도(魔道) 정통성 분쟁', intensity: 'strong', history: '흡혈사교와 천마숭배의 노선 대립' },
+            { targetId: 'sapa_union', type: '종속', description: '사파 세력 흡수', intensity: 'normal', history: '녹림 일부 산채 복속' },
             { targetId: 'suro', type: '밀약', description: '비밀 운송', intensity: 'weak' },
-            { targetId: 'salsu', type: '보호', description: '암살단 후원', intensity: 'weak' },
+            { targetId: 'salsu', type: '종속', description: '암살단 휘하 편입', intensity: 'normal', history: '살수막 일부 마교 소속' },
             { targetId: 'namgung', type: '적대', description: '중원 침공 저지선', intensity: 'strong' },
             { targetId: 'kunlun', type: '적대', description: '서역 세력권 충돌', intensity: 'normal' },
             { targetId: 'imperial', type: '적대', description: '황권 도전', intensity: 'strong' },
             { targetId: 'north_ice', type: '밀약', description: '새외 세력 협정', intensity: 'weak', history: '중원 분할 밀약설' }
         ],
-        history: '힘을 숭상하는 마교. 천마를 신으로 모시며 무림 제패를 꿈꾼다.'
+        history: '천마를 신격화하는 광신 집단. 절대 복종과 힘의 숭배가 교리이다.'
     },
     {
         id: 'blood_sect',
@@ -618,14 +618,16 @@ export const FACTIONS: Faction[] = [
         ],
         relations: [
             { targetId: 'shaolin', type: '적대', description: '무림 공적 1호', intensity: 'strong', history: '사교(邪敎)로 규정' },
-            { targetId: 'cheonma', type: '종속', description: '천마신교에 흡수됨', intensity: 'normal', history: '50년 전 잔당이 마교에 귀순' },
+            { targetId: 'cheonma', type: '숙적', description: '마도 정통성 분쟁', intensity: 'strong', history: '흡혈술과 천마공의 노선 대립, 혈교도 척살 사건' },
             { targetId: 'sacheon', type: '적대', description: '독혈공 도용 앙갚음', intensity: 'strong' },
-            { targetId: 'salsu', type: '협력', description: '암흑 거래', intensity: 'weak' },
+            { targetId: 'salsu', type: '협력', description: '암흑 거래', intensity: 'normal', history: '혈교 암살 의뢰' },
             { targetId: 'imperial', type: '적대', description: '황실 척결 대상', intensity: 'strong' },
             { targetId: 'gaebang', type: '적대', description: '정파 토벌 대상', intensity: 'normal' },
-            { targetId: 'beast_palace', type: '밀약', description: '사혈술 연구 교류', intensity: 'weak', history: '야수의 피를 이용한 사술' }
+            { targetId: 'beast_palace', type: '밀약', description: '사혈술 연구 교류', intensity: 'normal', history: '야수의 피를 이용한 혈공 연구' },
+            { targetId: 'wudang', type: '적대', description: '도가의 척결 대상', intensity: 'strong' },
+            { targetId: 'namgung', type: '적대', description: '세가 토벌대', intensity: 'normal' }
         ],
-        history: '피를 마시고 시체를 조종하는 사악한 종교. 무림의 공적.'
+        history: '피를 탐하고 인체를 개조하는 사교. 천마신교와는 마도 정통성을 두고 대립한다.'
     },
     {
         id: 'imperial',
@@ -637,25 +639,26 @@ export const FACTIONS: Faction[] = [
         colors: { primary: '#D4AC0D', secondary: '#7B241C', accent: '#1C2833' },
         effectType: '황권',
         particleCount: 100,
-        philosophy: '황권지상. 모든 무림인은 황제 아래 통제되어야 한다.',
-        signature_skills: ['규화보전', '창룡출두', '포박술', '은신술'],
+        philosophy: '황권지상. 무림인은 모두 잠재적 역적이다. 고수는 통제하거나 말살한다.',
+        signature_skills: ['규화보전', '창룡출두', '포박술', '금의위검'],
         leader: 'wichung',
         locations: [
             { name: '자금성', hanja: '紫禁城', x: 65, y: 30, type: '본산' }
         ],
         relations: [
-            { targetId: 'sapa_union', type: '숙적', description: '녹림 영구 토벌', intensity: 'strong' },
-            { targetId: 'salsu', type: '숙적', description: '암살단 척살 1순위', intensity: 'strong' },
-            { targetId: 'cheonma', type: '적대', description: '황권 도전 세력', intensity: 'strong' },
-            { targetId: 'blood_sect', type: '적대', description: '사교 척결', intensity: 'strong' },
-            { targetId: 'suro', type: '적대', description: '해적 토벌', intensity: 'normal' },
-            { targetId: 'gaebang', type: '암투', description: '정보 통제 갈등', intensity: 'weak' },
-            { targetId: 'haomun', type: '밀약', description: '이중 첩자 운영', intensity: 'weak', history: '밀정 활용' },
-            { targetId: 'moyong', type: '밀약', description: '황실 후원', intensity: 'weak', history: '비밀 지원 의혹' },
-            { targetId: 'shaolin', type: '협력', description: '무림 안정 협력', intensity: 'normal' },
-            { targetId: 'namgung', type: '협력', description: '정파 지원', intensity: 'weak' }
+            { targetId: 'sapa_union', type: '숙적', description: '녹림 영구 토벌', intensity: 'strong', history: '산적은 역적, 발본색원' },
+            { targetId: 'salsu', type: '숙적', description: '암살단 척살 1순위', intensity: 'strong', history: '관료 암살 다수로 현상금 최고' },
+            { targetId: 'cheonma', type: '숙적', description: '황권에 대한 도전', intensity: 'strong', history: '마교 토벌 칙령 발동' },
+            { targetId: 'blood_sect', type: '숙적', description: '사교 척결', intensity: 'strong', history: '인륜을 어지럽히는 사교로 규정' },
+            { targetId: 'suro', type: '적대', description: '해적 토벌', intensity: 'strong', history: '수군 동원 소탕전' },
+            { targetId: 'gaebang', type: '암투', description: '정보 통제 vs 민간 정보망', intensity: 'normal', history: '개방 정보원 회유/색출' },
+            { targetId: 'haomun', type: '종속', description: '밀정 조직으로 활용', intensity: 'normal', history: '하오문 간부 다수가 관부 밀정' },
+            { targetId: 'moyong', type: '밀약', description: '황실 밀착 세가', intensity: 'normal', history: '모용세가 황실 복고 야망 이용' },
+            { targetId: 'shaolin', type: '암투', description: '표면 협력, 실제 감시', intensity: 'normal', history: '무림맹 동향 감시' },
+            { targetId: 'namgung', type: '암투', description: '세가 세력 견제', intensity: 'weak', history: '지나친 무력 집중 경계' },
+            { targetId: 'hidden_masters', type: '적대', description: '은거 고수 색출', intensity: 'normal', history: '관부 관할 밖 고수 사냥' }
         ],
-        history: '황실의 비밀 경찰과 군대. 무림의 균형을 감시한다.'
+        history: '황제의 칼. 무림인을 잠재적 역적으로 보며 고수를 통제하거나 제거한다.'
     },
 
     // 5. 새외 & 기인
