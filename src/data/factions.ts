@@ -82,13 +82,14 @@ export const FACTIONS: Faction[] = [
             { name: '소림사', hanja: '少林寺', x: 55, y: 42, type: '본산' }
         ],
         relations: [
-            { targetId: 'wudang', type: '혈맹', description: '무림 양대산맥, 정마대전의 주축', intensity: 'strong', since: '300년 전' },
+            { targetId: 'wudang', type: '혈맹', description: '무림 양대산맥, 정마대전의 주축', intensity: 'strong', since: '300년 전', history: '표면은 혈맹이나 무림맹주 자리 암투' },
             { targetId: 'cheonma', type: '숙적', description: '정마대전의 불구대천 원수', intensity: 'strong', history: '수차례의 정마대전으로 수많은 희생자 발생' },
-            { targetId: 'hwasan', type: '동맹', description: '구파일방 맹주파', intensity: 'normal' },
+            { targetId: 'hwasan', type: '동맹', description: '구파일방 맹주파', intensity: 'normal', history: '표면 동맹, 실제 화산의 독자 행동 견제' },
             { targetId: 'ami', type: '사제', description: '불문의 동근동종', intensity: 'normal', history: '아미파 개조가 소림에서 수학' },
-            { targetId: 'gaebang', type: '협력', description: '무림맹 상임 이사파', intensity: 'normal' },
-            { targetId: 'blood_sect', type: '적대', description: '척결 대상 사교', intensity: 'strong' },
-            { targetId: 'namgung', type: '우호', description: '무림맹 후원 세가', intensity: 'normal' }
+            { targetId: 'gaebang', type: '협력', description: '무림맹 상임 이사방', intensity: 'normal', history: '개방 정보력 이용, 실제로는 하대' },
+            { targetId: 'blood_sect', type: '적대', description: '척결 대상 사교', intensity: 'strong', history: '무림 공적으로 규정' },
+            { targetId: 'namgung', type: '암투', description: '표면 우호, 실제 세가 세력 견제', intensity: 'normal', history: '세가의 단독 행동 경계' },
+            { targetId: 'kunlun', type: '경쟁', description: '도불 종주권 다투', intensity: 'weak', history: '종교적 정통성 암투' }
         ],
         history: '천년의 역사를 지닌 무림의 성지. 수많은 정마대전에서 정파를 이끌어온 정신적 지주.'
     },
@@ -109,13 +110,14 @@ export const FACTIONS: Faction[] = [
             { name: '무당산', hanja: '武當山', x: 52, y: 48, type: '본산' }
         ],
         relations: [
-            { targetId: 'shaolin', type: '혈맹', description: '무림 양대산맥, 정사의 기둥', intensity: 'strong', since: '300년 전' },
-            { targetId: 'hwasan', type: '동맹', description: '검문 교류, 검리(劍理) 공유', intensity: 'normal' },
-            { targetId: 'kunlun', type: '사제', description: '도문의 형제 문파', intensity: 'normal', history: '같은 도교 계통' },
-            { targetId: 'cheongseong', type: '우호', description: '도가 무공 교류', intensity: 'weak' },
+            { targetId: 'shaolin', type: '혈맹', description: '무림 양대산맥, 정사의 기둥', intensity: 'strong', since: '300년 전', history: '표면 혈맹이나 무림맹주 자리 두고 암투' },
+            { targetId: 'hwasan', type: '동맹', description: '검문 교류, 검리(劑理) 공유', intensity: 'normal', history: '표면 동맹, 내심 검도 정통성 경쟁' },
+            { targetId: 'kunlun', type: '사제', description: '도문의 형제 문파', intensity: 'normal', history: '같은 도교 계통이나 종주권 다투' },
+            { targetId: 'cheongseong', type: '암투', description: '표면 우호, 실제 도가 종주권 경쟁', intensity: 'normal', history: '음험한 청성파를 내심 경계' },
             { targetId: 'cheonma', type: '적대', description: '정마대전 주력', intensity: 'strong' },
-            { targetId: 'jongnam', type: '경쟁', description: '검도 정통성 논쟁', intensity: 'weak', history: '순양검 vs 대검의 우열 논쟁' },
-            { targetId: 'namgung', type: '협력', description: '무림맹 합동 작전', intensity: 'normal' }
+            { targetId: 'jongnam', type: '숙적', description: '검도 정통성 논쟁, 구파 내 숙적', intensity: 'normal', history: '순양검 vs 대검의 우열 논쟁이 감정 싸움으로' },
+            { targetId: 'namgung', type: '암투', description: '표면 협력, 실제 검문 수좌 다투', intensity: 'normal', history: '세가의 오만함에 불만' },
+            { targetId: 'blood_sect', type: '적대', description: '사교 척결 대상', intensity: 'strong' }
         ],
         history: '도교의 성지. 태극의 이치로 무림의 균형을 수호하는 대문파.'
     },
@@ -137,11 +139,12 @@ export const FACTIONS: Faction[] = [
         ],
         relations: [
             { targetId: 'jongnam', type: '숙적', description: '섬서 패권 분쟁, 대대로 이어진 앙숙', intensity: 'strong', since: '150년 전', history: '매화검 vs 종남대검의 정통성 논쟁' },
-            { targetId: 'wudang', type: '동맹', description: '검리 교류, 상호 검결 전수', intensity: 'normal' },
-            { targetId: 'kongdong', type: '협력', description: '섬서 지역 공동 방위', intensity: 'normal' },
-            { targetId: 'namgung', type: '경쟁', description: '검문 제일 다툼', intensity: 'normal', history: '천하제일검 칭호 놓고 암묵적 경쟁' },
-            { targetId: 'shaolin', type: '우호', description: '무림맹 핵심파', intensity: 'normal' },
-            { targetId: 'moyong', type: '원한', description: '과거 검보 도난 의혹', intensity: 'weak', history: '100년 전 검보 실종 사건' }
+            { targetId: 'wudang', type: '동맹', description: '검리 교류, 상호 검결 전수', intensity: 'normal', history: '표면 동맹이나 검도 정통성 암투' },
+            { targetId: 'kongdong', type: '협력', description: '섬서 지역 공동 방위', intensity: 'normal', history: '실제로는 공동파 하대' },
+            { targetId: 'namgung', type: '암투', description: '검문 제일 다투', intensity: 'normal', history: '천하제일검 칭호 놓고 암묵적 경쟁' },
+            { targetId: 'shaolin', type: '우호', description: '무림맹 핵심파', intensity: 'normal', history: '표면 우호, 내심 소림 독주 불만' },
+            { targetId: 'moyong', type: '원한', description: '과거 검보 도난 의혹', intensity: 'weak', history: '100년 전 검보 실종 사건' },
+            { targetId: 'cheonma', type: '적대', description: '정마대전 선봉', intensity: 'strong' }
         ],
         history: '검의 화려함과 날카로움을 극한까지 추구하는 중원 제일의 검문.'
     },
@@ -314,12 +317,14 @@ export const FACTIONS: Faction[] = [
         ],
         relations: [
             { targetId: 'haomun', type: '숙적', description: '천하 정보망 패권 다툼', intensity: 'strong', history: '거지와 왈패의 숙명적 대립' },
-            { targetId: 'shaolin', type: '협력', description: '무림맹 상임 이사방', intensity: 'normal' },
+            { targetId: 'shaolin', type: '협력', description: '무림맹 상임 이사방', intensity: 'normal', history: '소림의 정보 도구로 이용당함' },
             { targetId: 'sapa_union', type: '적대', description: '녹림도 토벌 선봉', intensity: 'normal' },
             { targetId: 'salsu', type: '적대', description: '암살단 추적', intensity: 'normal' },
             { targetId: 'ami', type: '협력', description: '정보 공유', intensity: 'weak' },
             { targetId: 'wudang', type: '우호', description: '의협 교류', intensity: 'weak' },
-            { targetId: 'imperial', type: '암투', description: '표면 협력, 실제 견제', intensity: 'weak', history: '관부의 감시를 경계' }
+            { targetId: 'imperial', type: '암투', description: '표면 협력, 실제 감시', intensity: 'normal', history: '관부의 감시를 경계' },
+            { targetId: 'namgung', type: '우호', description: '표면 정보 제공', intensity: 'weak', history: '세가에게 하대받음' },
+            { targetId: 'habuk', type: '협력', description: '정보 교환', intensity: 'weak', history: '팥가에게 하수 취급' }
         ],
         history: '거지들의 집단이나 그 정보력과 단결력은 천하제일이다.'
     },
@@ -397,12 +402,13 @@ export const FACTIONS: Faction[] = [
             { name: '하북성', hanja: '河北省', x: 58, y: 35, type: '본산' }
         ],
         relations: [
-            { targetId: 'namgung', type: '혼인', description: '삼대 정략결혼, 혈연 동맹', intensity: 'strong', history: '대대로 여식이 남궁세가로 출가' },
-            { targetId: 'moyong', type: '경쟁', description: '북방 패권 경쟁', intensity: 'normal' },
-            { targetId: 'jegal', type: '협력', description: '오대세가 연합', intensity: 'normal' },
-            { targetId: 'shaolin', type: '우호', description: '무림맹 지원', intensity: 'weak' },
+            { targetId: 'namgung', type: '혼인', description: '삼대 정략결혼, 혈연 동맹', intensity: 'strong', history: '대대로 여식이 남궁세가로 출가. 실제로는 남궁의 하수 취급.' },
+            { targetId: 'moyong', type: '경쟁', description: '북방 패권 경쟁', intensity: 'normal', history: '모용의 음험함 경계' },
+            { targetId: 'jegal', type: '협력', description: '오대세가 연합', intensity: 'normal', history: '제갈의 지략 덕분에 위기 탈출' },
+            { targetId: 'shaolin', type: '우호', description: '표면 우호, 실제 문파 하대', intensity: 'weak', history: '세가는 문파를 하수로 본다' },
             { targetId: 'cheonma', type: '적대', description: '북방 마교 저지선', intensity: 'strong' },
-            { targetId: 'north_ice', type: '원한', description: '과거 영토 분쟁', intensity: 'weak', history: '북방 세력권 충돌' }
+            { targetId: 'north_ice', type: '적대', description: '북방 영토 분쟁', intensity: 'strong', history: '빙궁의 영지 침탈 시도 격퇴' },
+            { targetId: 'gaebang', type: '협력', description: '정보 제공', intensity: 'weak', history: '개방 거지를 이용하나 대등하게 보지 않음' }
         ],
         history: '도법의 명가. 호탕하고 거친 가풍으로 유명하다.'
     },
@@ -423,13 +429,14 @@ export const FACTIONS: Faction[] = [
             { name: '요녕성', hanja: '遼寧省', x: 72, y: 52, type: '본산' }
         ],
         relations: [
-            { targetId: 'namgung', type: '숙적', description: '오대세가 수좌 쟁탈, 천년 라이벌', intensity: 'strong', since: '200년 전' },
-            { targetId: 'hwasan', type: '원한', description: '검보 도난 의혹', intensity: 'weak', history: '100년 전 화산검보 실종 연루설' },
-            { targetId: 'sacheon', type: '원한', description: '비급 유출 의심', intensity: 'weak', history: '만천화우 비급 습득 의혹' },
-            { targetId: 'habuk', type: '경쟁', description: '북방 세가 영향력', intensity: 'normal' },
-            { targetId: 'jegal', type: '암투', description: '지략 대결', intensity: 'normal', history: '수차례 모략전에서 충돌' },
-            { targetId: 'imperial', type: '밀약', description: '황실 후원 의혹', intensity: 'weak', history: '관부와의 비밀 협정설' },
-            { targetId: 'cheonma', type: '적대', description: '마교 토벌', intensity: 'normal' }
+            { targetId: 'namgung', type: '숙적', description: '오대세가 수좌 쟁탈, 천년 라이벌', intensity: 'strong', since: '200년 전', history: '이피지도로 남궁검법 복제 시도' },
+            { targetId: 'hwasan', type: '원한', description: '검보 도난', intensity: 'normal', history: '100년 전 화산검보 실종 연루설 사실' },
+            { targetId: 'sacheon', type: '원한', description: '비급 유출', intensity: 'normal', history: '만천화우 비급 습득 의혹 사실' },
+            { targetId: 'habuk', type: '경쟁', description: '북방 세가 영향력', intensity: 'normal', history: '클박한 팥가를 내심 멸시' },
+            { targetId: 'jegal', type: '숙적', description: '지략 대결', intensity: 'strong', history: '수차례 모략전에서 패배' },
+            { targetId: 'imperial', type: '종속', description: '황실 앨잡이', intensity: 'normal', history: '관부와의 비밀 협정, 무림 정보 제공' },
+            { targetId: 'cheonma', type: '적대', description: '마교 토벌', intensity: 'normal', history: '실제로는 마교와도 밀약' },
+            { targetId: 'north_ice', type: '적대', description: '영지 침탈', intensity: 'normal', history: '북방 영지 수비 중' }
         ],
         history: '몰락한 왕족의 후예. 우아함 속에 날카로운 비수를 감추고 있다.'
     },
@@ -450,14 +457,14 @@ export const FACTIONS: Faction[] = [
             { name: '호북성', hanja: '湖北省', x: 55, y: 58, type: '본산' }
         ],
         relations: [
-            { targetId: 'namgung', type: '혈맹', description: '검과 지략의 결합, 최강 동맹', intensity: 'strong', history: '대대로 군사(軍師) 역할 수행' },
-            { targetId: 'habuk', type: '협력', description: '오대세가 연합', intensity: 'normal' },
-            { targetId: 'kunlun', type: '우호', description: '진법 교류', intensity: 'weak' },
+            { targetId: 'namgung', type: '혈맹', description: '검과 지략의 결합, 최강 동맹', intensity: 'strong', history: '대대로 군사(軍師) 역할. 실제로는 남궁에 종속.' },
+            { targetId: 'habuk', type: '협력', description: '오대세가 연합', intensity: 'normal', history: '팽가의 단순함을 이용' },
+            { targetId: 'kunlun', type: '우호', description: '진법 교류', intensity: 'weak', history: '팔진도와 건곤진의 합진 연구' },
             { targetId: 'kongdong', type: '협력', description: '성진 합동 연구', intensity: 'weak' },
-            { targetId: 'moyong', type: '암투', description: '두뇌 싸움의 라이벌', intensity: 'normal', history: '모략전에서 수차례 대결' },
-            { targetId: 'shaolin', type: '우호', description: '무림맹 참모단', intensity: 'normal' },
+            { targetId: 'moyong', type: '숙적', description: '두뇌 싸움의 라이벌', intensity: 'strong', history: '모략전에서 수차례 승리' },
+            { targetId: 'shaolin', type: '우호', description: '표면 우호, 무림맹 참모단', intensity: 'normal', history: '실제로는 남궁의 눈치 살피는 처지' },
             { targetId: 'cheonma', type: '적대', description: '정마대전 전략 수립', intensity: 'strong' },
-            { targetId: 'imperial', type: '암투', description: '표면 협력, 실제 경계', intensity: 'weak' }
+            { targetId: 'imperial', type: '암투', description: '표면 협력, 실제 경계', intensity: 'weak', history: '관부 눈치 살피는 중' }
         ],
         history: '무림의 머리. 두뇌 싸움과 기관진식의 대가들.'
     },
@@ -473,7 +480,7 @@ export const FACTIONS: Faction[] = [
         colors: { primary: '#3D5C45', secondary: '#5D4037', accent: '#8D6E63' },
         effectType: '녹림기',
         particleCount: 160,
-        philosophy: '약육강식. 강한 자가 모든 것을 갖는다.',
+        philosophy: '약육강식. 강한 자가 모든 것을 갖는다. 의리? 이익 앞에선 무의미.',
         signature_skills: ['녹림도법', '선풍도', '야전술', '투망술'],
         leader: 'dokgopyo',
         locations: [
@@ -481,12 +488,14 @@ export const FACTIONS: Faction[] = [
         ],
         relations: [
             { targetId: 'imperial', type: '숙적', description: '관부의 영원한 토벌 대상', intensity: 'strong', history: '수백 년간 끊임없는 토벌전' },
-            { targetId: 'suro', type: '혈맹', description: '산적과 해적의 형제 동맹', intensity: 'strong', history: '육지와 물길의 분할 지배' },
-            { targetId: 'haomun', type: '협력', description: '뒷세계 협력 관계', intensity: 'normal' },
+            { targetId: 'suro', type: '협력', description: '산적과 해적의 동맹', intensity: 'normal', history: '육지와 물길의 분할 지배. 언제든 배신 가능.' },
+            { targetId: 'haomun', type: '암투', description: '뒷세계 패권 다투', intensity: 'normal', history: '협력하면서도 서로 기회 노림' },
             { targetId: 'gaebang', type: '적대', description: '정보전 대립', intensity: 'normal' },
             { targetId: 'jeomchang', type: '적대', description: '운남 지역 충돌', intensity: 'normal' },
-            { targetId: 'cheonma', type: '밀약', description: '물자 거래', intensity: 'weak', history: '마교에 무기 및 물자 밀매' },
-            { targetId: 'salsu', type: '협력', description: '암살 의뢰 관계', intensity: 'weak' }
+            { targetId: 'cheonma', type: '종속', description: '마교 휘하 편입', intensity: 'normal', history: '녹림 일부 산채가 마교에 복속' },
+            { targetId: 'salsu', type: '협력', description: '암살 의뢰 관계', intensity: 'weak', history: '서로 이용하는 관계' },
+            { targetId: 'namgung', type: '적대', description: '세가 상단 습격', intensity: 'strong', history: '남궁세가 토벌대에 대항' },
+            { targetId: 'blood_sect', type: '밀약', description: '사교와도 거래', intensity: 'weak', history: '이익이면 사교와도 손잡는다' }
         ],
         history: '산적들의 연합체. 거칠고 투박하지만 그들만의 의리가 있다.'
     },
@@ -507,11 +516,13 @@ export const FACTIONS: Faction[] = [
             { name: '장강', hanja: '長江', x: 60, y: 55, type: '본산' }
         ],
         relations: [
-            { targetId: 'sapa_union', type: '혈맹', description: '녹림의 형제, 육해 분할 동맹', intensity: 'strong', history: '산적은 산, 해적은 강을 지배' },
-            { targetId: 'haomun', type: '협력', description: '수로 정보 공유', intensity: 'normal' },
-            { targetId: 'namgung', type: '적대', description: '장강 통행료 분쟁', intensity: 'normal', history: '남궁세가 상단 습격 사건' },
-            { targetId: 'imperial', type: '적대', description: '수군 토벌 대상', intensity: 'strong' },
-            { targetId: 'cheonma', type: '밀약', description: '마교 물자 운송', intensity: 'weak', history: '비밀 운송로 제공' }
+            { targetId: 'sapa_union', type: '협력', description: '녹림의 형제, 육해 분할 동맹', intensity: 'normal', history: '산적은 산, 해적은 강. 이익 따라 배신 가능.' },
+            { targetId: 'haomun', type: '협력', description: '수로 정보 공유', intensity: 'normal', history: '서로 이용하는 관계' },
+            { targetId: 'namgung', type: '적대', description: '장강 통행료 분쟁', intensity: 'strong', history: '남궁세가 상단 습격 사건' },
+            { targetId: 'imperial', type: '숙적', description: '수군 토벌 대상', intensity: 'strong', history: '관부 수군과 수십 년 전쟁' },
+            { targetId: 'cheonma', type: '밀약', description: '마교 물자 운송', intensity: 'weak', history: '비밀 운송로 제공. 언제든 배신 가능.' },
+            { targetId: 'blood_sect', type: '밀약', description: '혈교 물자 운송', intensity: 'weak', history: '돈이면 사교도 태운다' },
+            { targetId: 'jeomchang', type: '적대', description: '운남 하운 충돌', intensity: 'normal', history: '점창 하운 습격' }
         ],
         history: '장강 수로를 지배하는 해적단. 물 위에서는 천하무적.'
     },
@@ -672,7 +683,7 @@ export const FACTIONS: Faction[] = [
         colors: { primary: '#D6EAF8', secondary: '#F4F6F7', accent: '#5DADE2' },
         effectType: '빙설',
         particleCount: 500,
-        philosophy: '냉정함의 미학. 얼음처럼 차갑고 단단한 마음을 갖는다.',
+        philosophy: '빙한천하(氷寒天下). 중원은 따뜻하고 약하다. 얼려서 지배한다.',
         signature_skills: ['빙백신공', '한빙장', '백색창', '빙결계'],
         leader: 'bingyeo',
         locations: [
@@ -680,10 +691,12 @@ export const FACTIONS: Faction[] = [
         ],
         relations: [
             { targetId: 'beast_palace', type: '숙적', description: '빙염상극, 천년 원수', intensity: 'strong', history: '얼음과 불의 상극 관계' },
-            { targetId: 'habuk', type: '원한', description: '북방 영토 분쟁', intensity: 'weak', history: '과거 세력권 충돌' },
-            { targetId: 'kunlun', type: '밀약', description: '서역 정보 교환', intensity: 'weak' },
-            { targetId: 'cheonma', type: '밀약', description: '새외 밀약', intensity: 'weak', history: '중원 분할 논의설' },
-            { targetId: 'moyong', type: '협력', description: '북방 무공 교류', intensity: 'weak' },
+            { targetId: 'habuk', type: '적대', description: '북방 영토 침공', intensity: 'strong', history: '하북팥가 영지 침탈 시도' },
+            { targetId: 'kunlun', type: '밀약', description: '서역 정보 교환', intensity: 'weak', history: '중원 침공 정보 수집' },
+            { targetId: 'cheonma', type: '동맹', description: '중원 분할 밀약', intensity: 'normal', history: '마교와 중원 양분 논의' },
+            { targetId: 'moyong', type: '적대', description: '북방 세가 침탈', intensity: 'normal', history: '모용세가 영지 약탈 시도' },
+            { targetId: 'shaolin', type: '적대', description: '중원 정파와 경계', intensity: 'normal', history: '빙궁 세력 확장 견제' },
+            { targetId: 'namgung', type: '적대', description: '세가 영지 침범', intensity: 'normal', history: '남궁세가 북방 상단 습격' },
             { targetId: 'hidden_masters', type: '협력', description: '은둔 고수와 교류', intensity: 'weak' }
         ],
         history: '북방의 얼음 궁전. 중원과는 다른 독자적인 무공 체계를 가졌다.'
@@ -698,7 +711,7 @@ export const FACTIONS: Faction[] = [
         colors: { primary: '#A04000', secondary: '#6E2C00', accent: '#873600' },
         effectType: '야수기',
         particleCount: 180,
-        philosophy: '야수성. 인간의 이성을 버리고 짐승의 감각을 깨운다.',
+        philosophy: '야수의 법칙. 약한 자는 먹이다. 중원인은 사냥감일 뿐.',
         signature_skills: ['백수권', '야수변신', '조련술', '비스트'],
         leader: 'mengho',
         locations: [
@@ -706,10 +719,13 @@ export const FACTIONS: Faction[] = [
         ],
         relations: [
             { targetId: 'north_ice', type: '숙적', description: '빙염상극, 불구대천', intensity: 'strong', history: '얼음과 불의 상극, 천년 전쟁' },
-            { targetId: 'blood_sect', type: '밀약', description: '사혈술 연구', intensity: 'weak', history: '야수의 피를 이용한 혈공 연구' },
-            { targetId: 'sapa_union', type: '협력', description: '남방 거래', intensity: 'weak' },
-            { targetId: 'shaolin', type: '중립', description: '새외로 불간섭', intensity: 'weak' },
-            { targetId: 'hidden_masters', type: '협력', description: '야생 고수와 교류', intensity: 'weak' }
+            { targetId: 'blood_sect', type: '협력', description: '사혈술 연구', intensity: 'normal', history: '야수의 피를 이용한 혈공 연구' },
+            { targetId: 'sapa_union', type: '협력', description: '남방 약탈 공조', intensity: 'normal', history: '녹림과 남방 약탈품 분배' },
+            { targetId: 'shaolin', type: '적대', description: '중원 침공', intensity: 'normal', history: '중원 남부 약탈 사건' },
+            { targetId: 'ami', type: '적대', description: '서남 영역 충돌', intensity: 'normal', history: '아미파 영역 침범' },
+            { targetId: 'sacheon', type: '적대', description: '남방 세가 침탈', intensity: 'normal', history: '당가 상단 습격' },
+            { targetId: 'hidden_masters', type: '협력', description: '야생 은둔자 교류', intensity: 'weak' },
+            { targetId: 'cheonma', type: '밀약', description: '중원 남북 양면 공격 논의', intensity: 'weak', history: '마교와 중원 남북 동시 침공 모의' }
         ],
         history: '맹수와 교감하며 야생의 힘을 사용하는 남만의 전사들.'
     },
