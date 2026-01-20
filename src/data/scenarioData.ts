@@ -73,7 +73,7 @@ export const FACTION_SCENARIOS: Record<FactionKey, Scenario> = {
     },
     visualTheme: {
       particle: 'petals',
-      bgImage: '/images/bg_orthodox.jpg',
+      bgImage: 'https://1-r-q.ukhttps://1-r-q.uk/images/bg/orthodox.png',
       overlayType: 'rain',
       ambientColor: '#1a365d',
     },
@@ -118,7 +118,7 @@ export const FACTION_SCENARIOS: Record<FactionKey, Scenario> = {
     },
     visualTheme: {
       particle: 'embers',
-      bgImage: '/images/bg_unorthodox.jpg',
+      bgImage: 'https://1-r-q.ukhttps://1-r-q.uk/images/bg/unorthodox.png',
       overlayType: 'noise',
       ambientColor: '#742a2a',
     },
@@ -164,7 +164,7 @@ export const FACTION_SCENARIOS: Record<FactionKey, Scenario> = {
     },
     visualTheme: {
       particle: 'embers',
-      bgImage: '/images/bg_demonic.jpg',
+      bgImage: 'https://1-r-q.ukhttps://1-r-q.uk/images/bg/demonic.png',
       overlayType: 'fog',
       ambientColor: '#4a1a1a',
     },
@@ -210,7 +210,7 @@ export const FACTION_SCENARIOS: Record<FactionKey, Scenario> = {
     },
     visualTheme: {
       particle: 'snow',
-      bgImage: '/images/bg_outer.jpg',
+      bgImage: 'https://1-r-q.ukhttps://1-r-q.uk/images/bg/outer.png',
       overlayType: 'fog',
       ambientColor: '#1e3a5f',
     },

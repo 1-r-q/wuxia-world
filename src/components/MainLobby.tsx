@@ -965,7 +965,7 @@ const FactionCard = memo(function FactionCard({
         style={{
           position: 'absolute',
           inset: 0,
-          backgroundImage: `url('/images/bg/${faction.code}.png')`,
+          backgroundImage: `url('https://1-r-q.uk/images/bg/${faction.code}.png')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           filter: 'grayscale(30%)',
@@ -1394,7 +1394,7 @@ function FactionDetailModal({
         <div style={{
           position: 'absolute',
           inset: 0,
-          backgroundImage: `url('/images/bg/${faction.code}.png')`,
+          backgroundImage: `url('https://1-r-q.uk/images/bg/${faction.code}.png')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center top',
           opacity: 0.12,

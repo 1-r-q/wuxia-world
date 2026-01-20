@@ -422,7 +422,7 @@ export default function ClientMagazineLayout({ faction }: Props) {
             <div style={{
               position: 'fixed',
               inset: 0,
-              backgroundImage: `url('/images/bg/${faction.code}.png')`,
+              backgroundImage: `url('https://1-r-q.uk/images/bg/${faction.code}.png')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               opacity: 0.15,
